@@ -25,8 +25,8 @@ class FrameSegment(object):
         Compress image and Break down
         into data segments 
         """
-        compress_img = cv2.imencode('.jpeg', img)[1]
-        dat = compress_img.tobytes()
+        compress_img = cv2.imencode('.jpg', img)[1]
+        dat = compress_img.tostring()
         size = len(dat)
         count = math.ceil(size/(self.MAX_IMAGE_DGRAM))
         array_pos_start = 0
