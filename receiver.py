@@ -34,7 +34,7 @@ def main():
         else:
             dat += seg[1:]
             img = cv2.imdecode(np.fromstring(dat, dtype=np.uint8), 1)
-            if img is not None and type(img)==np.ndarray :
+            if img is not None and type(img)==np.ndarray :                
                 cv2.imshow('frame', img)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
